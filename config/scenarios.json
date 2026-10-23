@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "description": "Versioned scenario parameters for the Dallas Stars 2026-27 forecast. "
+                 "Rates are validated to be positive; impossible games-played assumptions are rejected.",
+  "n_seasons": 10000,
+  "seed": 3315,
+  "season_games": 82,
+  "s0_baseline": {
+    "label": "Baseline calibrated to verified 2025-26 data",
+    "offense_change": 0.0,
+    "defense_change": 0.0,
+    "roster_delta_g_per_game": 0.0,
+    "roster_delta_ga_per_game": 0.0
+  },
+  "s1_offense": {
+    "label": "Offense changes with defense fixed",
+    "changes": [-0.15, -0.10, -0.05, 0.05, 0.10, 0.15]
+  },
+  "s2_defense": {
+    "label": "Goals-allowed changes with offense fixed (negative = improved defense)",
+    "changes": [-0.15, -0.10, -0.05, 0.05, 0.10, 0.15]
+  },
+  "s3_personnel": [
+    {
+      "id": "S3A",
+      "label": "Forward departure with replacement (roster math, prior-season rates)",
+      "note": "Outgoing player's per-team-game goals replaced by a replacement at a role factor; never subtracts the full departure without replacement.",
+      "outgoing_goals": null,
+      "outgoing_gp": null,
+      "incoming_goals": null,
+      "incoming_gp": null,
+      "future_games": 82,
+      "role_factor": 0.75
+    },
+    {
+      "id": "S3B",
+      "label": "Goaltending change with explicit goals-allowed assumption",
+      "note": "Goalie/defensive scenario requires an explicit GA assumption supported by goalie statistics; offensive points are never treated as defensive value.",
+      "delta_ga_per_game": null
+    }
+  ],
+  "s4_combined": {
+    "label": "Combined offense + defense + roster case (conditional, not a proven best prediction)",
+    "offense_change": -0.05,
+    "defense_change": -0.05,
+    "roster_delta_g_per_game": 0.0,
+    "roster_delta_ga_per_game": -0.05,
+    "note": "Show each component and order of application; label conditional on assumptions."
+  },
+  "point_thresholds": [90, 95, 100, 105, 110],
+  "sim_intervals": [0.80, 0.95]
+}
