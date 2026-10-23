@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+# Provenance metadata (small, safe to commit); raw snapshots and outputs stay local
+data/raw/!collection_manifest.json
+data/raw/!collection_blocker.json
+data/raw/**/*
+data/processed/**/*
+outputs/**/*
+!outputs/.gitkeep
+.ipynb_checkpoints/
+*.egg-info/
+build/
+dist/
