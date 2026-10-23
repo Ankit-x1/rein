@@ -1,0 +1,3 @@
+player,position,team,season,games_played,goals,assists,points,shots,shooting_pct,ppg,toi_per_game,source
+Player A,F,Dallas,2025-26,78,28,30,58,210,13.3,8,17.5,synthetic_fixture
+Player B,F,Dallas,2025-26,82,22,25,47,180,12.2,4,15.2,synthetic_fixture

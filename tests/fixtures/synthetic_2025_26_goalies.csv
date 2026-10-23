@@ -1,0 +1,2 @@
+player,position,team,season,games_played,starts,wins,losses,ot_losses,shots_against,saves,ga,sv_pct,gaa,shutouts,source
+Goalie C,G,Dallas,2025-26,48,45,30,12,6,1350,1250,100,92.6,2.15,5,synthetic_fixture
